@@ -1,8 +1,4 @@
 import { useEffect, useState } from 'react';
-import Fav from './fav';
-import { List } from '../Atom/List2';
-import Number from '../Templates/Numbers';
-import Price from './Price';
 const Market = () => {
   const pairs = 'https://indodax.com/api/pairs';
 
@@ -12,32 +8,19 @@ const Market = () => {
     fetch(pairs)
       .then(response => response.json())
       .then(data => {
-        setDatacoin(data)
+        setDatacoin(data.slice(0, 290));
       })
-      .catch(error => {
+      .catch(error => {error
       })
   }, [])
-  const [favorites, setFavorites] = useState([]);
-  const handleFavoriteClick = (index) => {
-    const updatedFavorites = [...favorites];
-    updatedFavorites[index] = !updatedFavorites[index];
-    setFavorites(updatedFavorites);
-  };
   return (
-    <div >
+    <div className='flex flex-col' >
+      <p className="border w-40 h-10 flex items-center font-bold text-[13px] p-2">Market</p>
       {datacoin.map((coin, index) => {
         return (
-          <div key={index} className='flex'>
+          <div key={index} className='w-40 h-10 border flex items-center justify-start gap-2 p-2 text-[#636e7b] text-[13px]'>
 
-            <Fav filled={favorites[index]} onClick={() => handleFavoriteClick(index)} />
-            <Number index={index} />
-            <List width={'w-[150px] gap-2'}>
-              <img src={coin.url_logo} alt="" /> {coin.description}
-            </List>
-            <List width={'w-[150px] capitalize'}>
-              {coin.coingecko_id}
-            </List>
-
+            <img src={coin.url_logo} alt="" className='w-5 h-5' /> {coin.description}
           </div>
         )
       })}

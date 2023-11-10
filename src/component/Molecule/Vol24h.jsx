@@ -24,7 +24,7 @@ const Vol = () => {
             .then(dataVol => {
                 const tickers = dataVol.tickers || {}; // Periksa apakah properti tickers tersedia
                 const lastVol = Object.values(tickers).map(ticker => ticker.vol_idr);
-                setLastVol(lastVol);
+                setLastVol(lastVol.slice(0,290));
             })
             .catch(error => {
                 console.log(error);
@@ -35,10 +35,11 @@ const Vol = () => {
     return (
         <>
             <div>
+            <p className="border  h-10 flex items-center font-bold text-[13px] p-2">Vol24h</p>
                 {lastVol.map((dataVol, index) => (
-                    <List width={'w-[150px] flex justify-end'} key={index}>
+                    <div key={index} className=' h-10 w-40 border flex items-center justify-end gap-2 p-2 text-[#636e7b] text-[13px]'>
                         {formatCurrency(parseFloat(dataVol))}
-                    </List>
+                    </div>
                 ))}
             </div>
         </>

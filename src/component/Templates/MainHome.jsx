@@ -6,6 +6,7 @@ import { Btnmarket } from "../Atom/Button"
 
 import Change from "../Molecule/Change24h"
 import Carousel from "./carousel"
+import MarketHome from "../organism/MarketHome"
 // import MarketTest from "../Molecule/MarketTest"
 const MainHome = () => {
     return (
@@ -33,33 +34,7 @@ const MainHome = () => {
                         <Btnmarket text="Koin Baru ">Koin Baru</Btnmarket>
                     </div>
                     <div className="px-[15px] w-full">
-                        <thead className="border w-full">
-                            <th className="flex p-0 w-full">
-                                <Th width={'w-[45px]'} >Fav </Th>
-                                <Th width={'w-[45px]'} >No. </Th>
-                                <Th width={'w-[150px]'}>Market </Th>
-                                <Th width={'w-[150px]'}>Nama Aset </Th>
-                                <Th width={'w-[150px]'}>Harga Terakhir </Th>
-                                <Th width={'w-[150px]'}>Vol 24h </Th>
-                                <Th width={'w-[150px]'}>% Change</Th>
-                            </th>
-
-                        </thead>
-                        <div className="flex">
-                            <div >
-                                <Market></Market>
-                            </div>
-                            <div>
-                                <Price />
-                            </div>
-                            <div>
-                                <Vol />
-                            </div>
-                            <div>
-                                <Change />
-                            </div>
-
-                        </div>
+                       <MarketHome/>
                     </div>
                 </div>
             </div>
