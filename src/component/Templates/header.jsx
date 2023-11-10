@@ -29,18 +29,11 @@ const Header = () => {
 
     console.log(typeof btcPrice)
 
-    // function bar(){
-    //     return(
-
-    //     )
-    // }
-
     return (
         <header className="relative">
             <div className="bg-[#0084b6] p-[9px] px-[15px] w-full flex justify-between fixed z-10 ">
 
                 <div className="bg-white  shadow-sm flex items-center h-full justify-center ">
-
                     <DropBarLeft></DropBarLeft>
                 </div>
                 <div className="flex gap-[5px]">

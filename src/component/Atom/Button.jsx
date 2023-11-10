@@ -12,6 +12,6 @@ export default Button
 
 export const Btnmarket=({text,classname="text-white"})=>{
     return(
-        <button className={`${classname} px-[20px] font-bold py-[14px]  text-[14px]`}>{text}</button>
+        <button className={`${classname} px-[20px] font-bold py-[14px]  text-[14px] hover:bg-[#76aec3]`}>{text}</button>
     )
 }

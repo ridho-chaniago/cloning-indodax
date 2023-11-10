@@ -7,6 +7,7 @@ const Change = () => {
     
     const summaries = 'https://indodax.com/api/summaries/';
     const [change, setChange] = useState([]);
+
     useEffect(() => {
         fetch(summaries)
             .then(response => response.json())
@@ -17,10 +18,7 @@ const Change = () => {
                 const lastChangeeeArray = Object.entries(lastChangeee).map(([name, value]) => ({ name, value }));
                 
                 setChange(lastChangeeeArray.slice(0.290));
-                const ofds =lastChangeeeArray.value
-                const jdj=parseFloat(ofds)
-                console.log(typeof jdj)
-                console.log(jdj)
+                
                 {parseFloat(change)}
                     {console.log(typeof change)}
                     {console.log( change)}
@@ -41,7 +39,7 @@ const Change = () => {
     return (
         <div>
             <p className="border  h-10 flex items-center font-bold text-[13px] p-2">Change 24h</p>
-            {change.map((data, index) => (
+            {change.slice(0,290).map((data, index) => (
                 <div key={index} className=' h-10 w-30 border flex items-center justify-start gap-2 p-2 text-[#636e7b] text-[13px]'>
              
                    {data.value}
