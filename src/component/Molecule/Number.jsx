@@ -1,4 +1,4 @@
-import { ThTd } from "../Atom/ThTd";
+
 
 function Num() {
     const count = 290;

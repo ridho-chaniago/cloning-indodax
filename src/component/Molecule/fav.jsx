@@ -1,6 +1,5 @@
 import { RiStarFill, RiStarLine } from 'react-icons/ri';
 import { useState } from 'react';
-import { ThTd } from '../Atom/ThTd';
 
 const Fav = () => {
     const favCount = 290; // Jumlah bintang yang ingin ditampilkan

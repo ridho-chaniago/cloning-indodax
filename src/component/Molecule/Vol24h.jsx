@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { List } from "../Atom/List2";
 
 function formatCurrency(amount) {
     if (typeof amount !== 'number') {

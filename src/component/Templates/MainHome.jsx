@@ -1,13 +1,7 @@
-import Market from "../Molecule/Market"
-import Price from "../Molecule/Price"
-import Vol from "../Molecule/Vol24h"
-import Th from "../Atom/th"
-import { Btnmarket } from "../Atom/Button"
 
-import Change from "../Molecule/Change24h"
+import { Btnmarket } from "../Atom/Button"
 import Carousel from "./carousel"
 import MarketHome from "../organism/MarketHome"
-// import MarketTest from "../Molecule/MarketTest"
 const MainHome = () => {
     return (
 
@@ -34,7 +28,7 @@ const MainHome = () => {
                         <Btnmarket text="Koin Baru ">Koin Baru</Btnmarket>
                     </div>
                     <div className="px-[15px] w-full">
-                       <MarketHome/>
+                        <MarketHome />
                     </div>
                 </div>
             </div>
